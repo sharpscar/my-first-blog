@@ -5,11 +5,21 @@
     <title>welcome</title>
   </head>
   <body>
+    <div class="">
+      <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
 
-    greeting
+    {% for post in posts %}
+    <div class="">
+      <p>
+        published : {{post.published_date}}
+      </p>
+      <h1><a href=""> {{post.title}}</a></h1>
+      <p>
+        {{post.text|linebreaks}}
+      </p>
+    </div>
 
-    <h1>great meet you</h1>
-
-    <h4>test driven develop for clean code  </h4>
+    {% endfor %}
   </body>
 </html>
